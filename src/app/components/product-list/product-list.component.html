@@ -1,8 +1,9 @@
 <div class="main-content">
   <div class="section-content section-content-p30">
+    <h4>{{currentCategoryName}}</h4>
+    <hr>
     <div class="container-fluid">
       <div class="row">
-
         <div class="col-md-3" *ngFor="let tempProduct of products">
           <div class="product-box">
             <a href="product-detail.html">
@@ -15,7 +16,6 @@
             <a href="#" class="primary-btn">Add to cart</a>
           </div>
         </div>
-
       </div>
 
       <div class="footer-pagination">
