@@ -1,18 +1,47 @@
-<table class="table">
-  <thead>
-  <tr>
-    <th></th>
-    <th>Name</th>
-    <th>Price</th>
-    <th>Units in Stock</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let tempProduct of products">
-    <td class="align-middle"><img src="{{tempProduct.imageUrl}}" alt="" height="100"></td>
-    <td class="align-middle">{{tempProduct.name}}</td>
-    <td class="align-middle">{{tempProduct.unitPrice | currency: 'USD'}}</td>
-    <td class="align-middle">{{tempProduct.unitsInStock}}</td>
-  </tr>
-  </tbody>
-</table>
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-md-3" *ngFor="let tempProduct of products">
+          <div class="product-box">
+            <a href="product-detail.html">
+              <img src="{{tempProduct.imageUrl}}" class="img-responsive">
+            </a>
+            <a href="product-detail.html">
+              <h1>{{tempProduct.name}}</h1>
+            </a>
+            <div class="price">{{tempProduct.unitPrice | currency: 'USD'}}</div>
+            <a href="#" class="primary-btn">Add to cart</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-pagination">
+        <div class="row">
+          <div class="col-md-6"></div>
+          <div class="col-md-3">
+            <div class="items">
+              <label>Item per page</label> <select>
+              <option>10</option>
+              <option>20</option>
+              <option>30</option>
+              <option>40</option>
+            </select>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="number">1 - 10 of 100</div>
+          </div>
+          <div class="col-md-1">
+            <div class="arrows">
+              <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+              <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
