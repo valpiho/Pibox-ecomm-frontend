@@ -4,6 +4,7 @@
     <hr>
     <div class="container-fluid">
       <div class="row">
+
         <div class="col-md-3" *ngFor="let tempProduct of products">
           <div class="product-box">
             <a href="product-detail.html">
@@ -16,6 +17,10 @@
             <a href="#" class="primary-btn">Add to cart</a>
           </div>
         </div>
+        <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+          No products found.
+        </div>
+
       </div>
 
       <div class="footer-pagination">
